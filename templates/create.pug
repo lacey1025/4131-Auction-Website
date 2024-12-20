@@ -1,0 +1,34 @@
+extends parent.pug
+
+block head
+  title Add Listing
+  link(rel='stylesheet' href='/css/main.css')
+  script(async='' defer='' src='/js/new_listing.js')
+
+block content
+  h1 Add a Listing
+  .listing-form-container
+    .addlisting
+      p
+        label(for='title') Title:
+        input#title(type='text' name='title')
+      p
+        label(for='image') Image URL:
+        input#image(type='url' name='image')
+      p
+        label(for='description') Description:
+        textarea#description(name='description' rows='8' cols='50')
+      p
+        label(for='category') Category:
+        select#category(name='category')
+          option(value='aroids') Aroids
+          option(value='succulents') Succulents
+          option(value='orchids') Orchids
+          option(value='other') Other
+      p#other_p
+        label(for='category_other') enter a new category:
+        input#category_other(type='text' name='category_other')
+      p
+        label(for='end_date') Sale Date:
+        input#end_date(type='date' name='end_date' min='' max='')
+      input#submit-listing(type='submit' value='submit')

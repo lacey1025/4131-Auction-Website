@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #f7f5f5;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #514653;
+    font-size: 1.5em;
+}
+h1, caption {
+    font-family: 'Playwrite DE Grund', 'Quicksand', sans-serif;
+    text-align: center;
+    font-size:2.5em;
+    color: #202130;
+}
+h2 {
+    text-align: center;
+    color: #788683;
+    font-weight:300;
+    font-style: italic;
+}
+nav {
+    display: inline-flex;
+    width: 100%;
+    justify-content:space-around;
+    align-items: center;
+    padding-right: 1ch;
+    background-color: #87768a;
+    color: #f7f5f5;
+    margin: 0px;
+}
+nav a {
+    color: #9caca8;
+    text-decoration: none;
+    background-color: #7A6A7F;
+    padding: .7ex; 
+    padding-inline: 1em;
+    margin: .5ex;
+}
+nav a:hover {
+    background-color: #8FA09C;
+    color: #7A6A7F;
+}
+
+input, select {
+    font-family: 'Quicksand';
+    font-size: 0.7em;
+    color: #514653;
+    height: 5ex;
+    background-color: #f7f5f5;
+    box-shadow: none;
+    border-style: none;
+    padding-inline: 0.5em;
+    margin: 0.5ex;
+}
+input[type="submit"] {
+    color: #f7f5f5;
+    background-color: #8FA09C;
+}
+input[type="submit"]:hover {
+    background-color: #7c8683;
+}
+strong {
+    color: #8b23ab;
+}
+em {
+    color: #3e00a9;
+}
+img.mainpage {
+    width: 40%;
+    border-radius: 20px;
+}
+.company_descr, .listing_left_col p {
+    width: 40%;
+    background-color: #dfeae7;
+    padding-inline: 1em;
+    padding-top: 1ex;
+    padding-bottom: 1ex;
+    box-shadow: 0 .5ch 1ch #b4bbba;
+}
+.mainpage_content, .listing_content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.listing_content {
+    align-items: flex-start;
+}
+.listing_left_col, .listing_right_col {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1ex;
+}
+img.listing {
+    outline: .3em solid #514653;
+}
+.listing_left_col p {
+    width: 100%;
+    background-color: #87768A;
+    color: #f7f5f5;
+    box-shadow: 0 .5ch 1ch #8c8a8d;
+    border-radius: 5px;
+}
+.bid, .add_bid {
+    background-color: white;
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    outline: .1em solid #87768A;
+    border-radius: 5px;
+    padding: .5ex;
+    margin: .5ex;
+}
+hr {
+    height: .3ex;
+    border: none;
+    width: 95%;
+    background-color: #514653;
+    margin-top: 1.5ex;
+    margin-bottom: 1.5ex;
+}
+.bidder {
+    font-weight: bold;
+    font-style: italic;
+}
+.bid>*:nth-child(3) {
+    flex-basis: 100%;
+    text-align: left;
+}
+#gallery_contents {
+    display: flex;
+    justify-content: space-evenly;
+}
+#gallery_left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1ex;
+}
+#gallery_right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1ex;
+    padding: 2em;
+}
+table {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2ex;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+caption {
+    margin-bottom: 1ex;
+}
+thead tr {
+    background-color: #87768A;
+    color: white;
+}
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+tbody tr:nth-child(even) {
+    background-color: #d1c6d5;
+}
+th, td {
+    text-align: center;
+    padding: 1ex;
+}
+td a {
+    text-decoration: none;
+    color: #438f7f;
+}
+td a:visited {
+    color: #1a5246;
+}
+.listing-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5em;
+}
+.addlisting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+.addlisting p {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+.addlisting input, .addlisting textarea, .addlisting select {
+    background-color: WHITE;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #514653;
+    font-size: 1.5ex;
+    color: #514653;
+    font-family: 'Quicksand', sans-serif;
+}
+.addlisting input[type="submit"] {
+    width: 50%;
+    height: 4ex;
+    margin: 2ex;
+    background-color: #438f7f;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    color: WHITE;
+}
+.addlisting select {
+    appearance: none;
+}
+#other_p {
+    display: none;
+}
+.bids {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bids_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 2px;
+    width: 95%;
+}
+.bids_title button {
+    width: 40%;
+    height: 4ex;
+    background-color: #438f7f;
+    font-size: 1.5ex;
+    border: none;
+    color: WHITE;
+    border-radius: 5px;
+}
+.bids_title button:hover {
+    background-color: #657f77; 
+}
+.bids_title h3 {
+    margin: 0px;
+}
+.add_bid {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+}
+.add_bid * {
+    padding: 1ex;
+    width: 90%;
+}
+.add_bid label {
+    padding-bottom: 0ex;
+}
+.add_bid input[type="text"], .add_bid input[type="number"] {
+    background-color: WHITE;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #514653;
+}
+.add_bid textarea {
+    margin-bottom: 1.5ex;
+    font-size: 1.5ex;
+    font-family: 'Quicksand', sans-serif;
+}
+.add_bid input[type="submit"] {
+    background-color: #438f7f;
+    font-size: 1.5ex;
+    border: none;
+    color: WHITE;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 1ex;
+}
+.ending_soon {
+    width: 100%;
+    background-color: #c62b2b;
+    padding: 0.5ex;
+    visibility: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.ending_soon p {
+    color: white;
+    margin: 0px;
+    margin-right: 1.5ex;
+}
+.delete-listing-button {
+    width: 70%;
+    height: 5ex;
+    background-color: #514653;
+    color: white;
+}

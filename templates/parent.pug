@@ -1,0 +1,18 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  block head
+nav
+  a(href='/main') Home
+  a(href='/gallery') Gallery
+  a(href='/create') Add Listing
+  form(action='/gallery' method='GET')
+    input#query(type='text' name='query' placeholder='search our listings')
+    select(name='category')
+      option(value='all') all categories
+      option(value='aroids') Aroids
+      option(value='succulents') Succulents
+      option(value='orchids') Orchids
+      option(value='other') Other
+    input(type='submit' value='search')
+block content

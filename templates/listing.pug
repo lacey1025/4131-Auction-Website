@@ -1,0 +1,35 @@
+extends parent.pug 
+
+block head
+  title Poopy Pants Plants
+  link(rel='stylesheet' href='/css/main.css')
+  script(defer='' src='/js/bid.js')
+
+block content
+  h1= listing.title
+  .listing_content
+    .listing_left_col
+      img.listing(src=`${listing.image}` width='400')
+      p= listing.description
+    .listing_right_col
+      .bids_title
+        h3 Bids History
+        button#place_bid_button(type='button') place bid
+      #add_bid.add_bid
+        label(for='name') Your Name:
+        input#name(type='text' name='name')
+        label(for='amount') Amount:
+        input#amount(type='number' name='amount' min='0' step='0.01')
+        label(for='comment') Comment:
+        textarea#comment(name='comment' rows='4' cols='30')
+        input#listing_num(type='text' name='listing_num' hidden='')
+        input#submit_bid_button(type='submit' value='submit')
+      hr
+      #bids.bids 
+          each bid in listing.bids 
+              .bid 
+                  span.amount $#{Number(bid.bid_amount).toFixed(2)}
+                  span.bidder= bid.bidder_name
+                  if (bid.comment != "")
+                      p= bid.comment 
+            

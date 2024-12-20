@@ -1,0 +1,36 @@
+extends parent.pug
+
+block head
+  title Happy Plants Auctions
+  link(rel='stylesheet' href='/css/main.css')
+  script(async='' defer='' src='/js/mainpage.js')
+
+block content
+  h1 Poopy Pants Plants
+  // Slogan from ChatGPT hahaha
+  h2 Deals so good you&apos;ll soil yourself!
+  .mainpage_content
+    img.mainpage(src='/images/mainpage.jpeg' alt='Lady with a cactus' width='450')
+    .company_descr
+      p
+        | Here at Happy Plants, we specialize in meeting all of your houseplant needs for an
+        | affordable price! We grow our plants in the 
+        strong finest
+        |  soil and package
+        |                 them specially for you! Did the pandemic get you into a weirdly obsessive plant hobby?
+        |                 Would you rather have plants than kids? Us too! Get your plants! Do a dance! and
+        |                 enjoy making life about living!
+      p
+        | Our plant listings include some of the rarest and most desireable plants around!
+        | Some of those plants include:
+      ul
+        li Monstera albos, aureas, obliquas, and Burle Marx flames!
+        li Many varieties of veriagated alocasias!
+        li The purpliest purple passions around!
+      p
+        | All of our plants are sold at auction. All you have to do is place a bid on the 
+        em fanciest,
+        |                 rarest plant that meets your fancy! Once the time is up, that plant will be automatically
+        |                 sold to the highest bidder. There will be no charge to your payment method until the auction
+        |                 is final. If you win an item, it will be shipped to your door within 7-10 business days.
+

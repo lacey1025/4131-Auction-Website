@@ -1,0 +1,39 @@
+extends parent.pug
+
+block head
+  title Poopy Pants Plants
+  link(rel='stylesheet' href='/css/main.css')
+  script(defer='' src='/js/table.js')
+
+block content
+  #gallery_contents
+    #gallery_left
+      table#gallery_table
+        caption Gallery
+        thead
+          tr
+            th Listing
+            th Number of Bids
+            th Top Bid
+            th Sale Date
+            th Auction Ends
+            th
+        tbody
+          each listing in listings
+            tr(id=`row_${listing.id}`)
+              td: a(href=`/listing/${listing.id}`)= listing.title
+              td= listing.num_bids
+              if listing.num_bids > 0
+                td $#{Number(listing.top_bid_amount).toFixed(2)}
+              else 
+                td No bids 
+              td(id="sale_date" data-date=listing.end_date.toISOString())= `${('0' + new Date(listing.end_date).getDate()).slice(-2)}/${('0' + (new Date(listing.end_date).getMonth() + 1)).slice(-2)}/${new Date(listing.end_date).getFullYear().toString().slice(-2)}`
+              td(id="time_remaining")
+              td(id="image", hidden)= listing.image 
+              td(id="description", hidden)= listing.description 
+              td(id="delete_td")
+                button(type="button" class="delete-listing-button" listing-id=`${listing.id}`) Delete
+              td(id="description", hidden)= listing.description 
+    #gallery_right 
+      img#preview_image(src="" alt="Image preview" hidden width="250")
+      p#preview_description(hidden)
